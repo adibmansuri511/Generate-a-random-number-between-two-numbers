@@ -1,18 +1,19 @@
-const calculate = () => {
+const randomNumber = () => {
 
-    // Get base value from input
-    let base = Number(document.getElementById("base").value);
+    // Get Minimum value from input
+    let minValue = Number(document.getElementById("minValue").value);
 
-    // Get height value from input
-    let height = Number(document.getElementById("height").value);
+    // Get Maximum value from input
+    let maxValue = Number(document.getElementById("maxValue").value);
 
-    let triangleArea = Math.ceil(((1 / 2) * base * height));
+    // Random number generation equation
+    let randomNumber = (Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue);
 
-    triangleArea = `The area of the triangle is: ${triangleArea}`;
+    randomNumber = `The random number between ${minValue} and ${maxValue} is : ${randomNumber}`;
 
-    console.log(triangleArea);
+    console.log(randomNumber);
 
-    document.querySelector("#h4").innerHTML = triangleArea;
+    document.querySelector("#h4").innerHTML = randomNumber;
 
     return;
 }
